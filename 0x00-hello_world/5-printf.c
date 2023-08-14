@@ -1,10 +1,10 @@
 #include <stdio.h>
 /*
- *main -Entry point
+ * main - Entry point
  *
- *Description:using 'printf' function print string with newline
+ * Description: using 'printf' function print string with newline
  *
- *Return: the return value is 0 means success
+ * Return: the return value is 0 means success
  */
 int main(void)
 {
