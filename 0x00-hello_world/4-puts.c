@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description:the 'puts' function used to print a string following by a newline
+ * Description:'puts' function used to print string following by a newline
  * Return:the return value is 0 means succes
  */
 int main(void)
