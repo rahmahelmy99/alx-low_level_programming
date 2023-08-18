@@ -17,7 +17,7 @@ int main(void)
 
 	while (dgt1 <= 99)
 	{
-		dgt2 = 0;
+		dgt2 = dgt1;
 		while (dgt2 <= 99)
 		{
 			if (dgt1 != dgt2 && dgt1 < dgt2)
