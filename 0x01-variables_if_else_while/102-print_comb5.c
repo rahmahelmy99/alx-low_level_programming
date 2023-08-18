@@ -13,40 +13,29 @@
 int main(void)
 {
 	int dgt1 = 0;
-	int dgt2, dgt3, dgt4;
+	int dgt2;
 
-	while (dgt1 <= 9)
+	while (dgt1 <= 99)
 	{
 		dgt2 = 0;
-		while (dgt2 <= 9)
+		while (dgt2 <= 99)
 		{
-			dgt3 = 0;
-			while (dgt3 <= 9)
+			if (dgt1 != dgt2 && dgt1 < dgt2)
 			{
-				dgt4 = 0;
-				while (dgt4 <= 9)
+				putchar((dgt1 / 10) + 48);
+				putchar((dgt1 % 10) + 48);
+				putchar(' ');
+				putchar((dgt2 / 10) + 48);
+				putchar((dgt2 % 10) + 48);
+				if (dgt1 != 98 || dgt2 != 99)
 				{
-					if (dgt1 != dgt2 &&
-						dgt2 != dgt3 &&
-						dgt3 != dgt4 &&
-						dgt1 < dgt2 &&
-						dgt2 < dgt3 &&
-						dgt3 <  dgt4)
-					{
-						putchar(dgt1 + 48);
-						putchar(dgt2 + 48);
-						putchar(' ');
-						putchar(dgt3 + 48);
-						putchar(dgt4 + 48);
-						if (dgt1 + dgt2 + dgt3 + dgt4 == 35)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
+			dgt2++;
 		}
+		dgt1++;
 	}
 	putchar('\n');
 	return (0);
