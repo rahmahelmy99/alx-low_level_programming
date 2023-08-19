@@ -13,8 +13,9 @@
 int main(void)
 {
 	char s[] = "_putchar";
+	int c;
 
-	for (int c = 1; c < 9; c++)
+	for (c = 1; c < 9; c++)
 		_putchar(s[c]);
 	_putchar('\n');
 	return (0);
