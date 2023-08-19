@@ -1,4 +1,5 @@
 #include "main.h"
+#include "main.h"
 
 /**
  * print_sign - prototype function that prints
