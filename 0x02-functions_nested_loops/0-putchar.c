@@ -1,9 +1,10 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - Entry point.
+ * main - entry point.
  *
- * Description: program that prints "_putchar".
+ * Description: program to print "_putchar".
  *
  * Return: return value is 0 means success.
  *
@@ -11,5 +12,10 @@
 
 int main(void)
 {
-	printf("_putchar");
+	char s[] = "_putchar";
+
+	for (int c = 1; c < 9; c++)
+		_putchar(s[c]);
+	_putchar('\n');
+	return (0);
 }
