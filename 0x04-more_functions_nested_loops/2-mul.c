@@ -1,11 +1,11 @@
 #include <main.h>
 
 /**
- * mul -a prototype function that multiplies two integers.
- * @a: is a first input number.
- * @b: is a second input number.
+ * mul - prototype function that multipliestwo integers.
+ *@a: is a first input number.
+ *@b: is a second input number.
  *
- * return: a result.
+ * Return: return a value of result.
  *
 */
 
