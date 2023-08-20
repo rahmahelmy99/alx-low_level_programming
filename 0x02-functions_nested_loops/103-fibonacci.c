@@ -12,7 +12,7 @@
 int main(void)
 {
 	unsigned long f1 = 0, f2 = 1, sum;
-	int even;
+	long even;
 
 	while (1)
 	{
@@ -26,6 +26,6 @@ int main(void)
 		f1 = f2;
 		f2 = sum;
 	}
-	printf("%i\n", even);
+	printf("%ld\n", even);
 	return (0);
 }
