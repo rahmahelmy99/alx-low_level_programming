@@ -4,6 +4,7 @@
 /**
  * print_times_table - prototype function that prints
  * the n times table, starting with 0.
+ * @n: input number.
  *
  * Return: 0 if success.
  *
@@ -13,7 +14,7 @@ void print_times_table(int n)
 {
 	int i, j, mul;
 
-	if (n < 15 && n > 0)
+	if (n <= 15 && n >= 0)
 	{
 		for (i = 0; i <= n; i++)
 		{
