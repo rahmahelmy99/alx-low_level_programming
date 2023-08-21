@@ -10,22 +10,22 @@
 
 void more_numbers(void)
 {
-	int row = 0, num;
+	int row = 0, dgt1, dgt2;
 
 	while (row <= 9)
 	{
 		num = 0i;
 
-		while (num <= 9)
+		while (dgt1 <= 9)
 		{
-			_putchar(num + 48);
-			num++;
+			_putchar(dgt1 + 48);
+			ndgt1++;
 		}
-		while (num < 5)
+		while (dgt2 < 5)
 		{
 			_putchar(1 + 48);
-			_putchar((num % 10) + 48);
-			num++;
+			_putchar((dgt2 % 10) + 48);
+			dgt2++;
 		}
 		row++;
 		_putchar('\n');
