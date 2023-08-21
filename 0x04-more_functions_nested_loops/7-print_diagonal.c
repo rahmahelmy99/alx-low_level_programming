@@ -13,15 +13,15 @@
 
 void print_diagonal(int n)
 {
-	int r, s;
+	int slash, spaces;
 
 	if (n <= 0)
 		_putchar('\n');
 	else
 	{
-		for (r = 1; r <= n; r++)
+		for (slash = 1; slash <= n; slash++)
 		{
-			for (s = 1; s <= r; s++)
+			for (spaces = 1; spaces <= slash; spaces++) /* to print spaces n times*/
 				_putchar(' ');
 			_putchar('\\'); /*the character / in ascii*/
 			_putchar('\n');
