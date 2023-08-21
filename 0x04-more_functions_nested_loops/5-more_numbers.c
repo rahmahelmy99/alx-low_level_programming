@@ -14,13 +14,13 @@ void more_numbers(void)
 
 	while (row <= 9)
 	{
-		num = 0i;
-
+		dgt1 = 0;
 		while (dgt1 <= 9)
 		{
 			_putchar(dgt1 + 48);
-			ndgt1++;
+			dgt1++;
 		}
+		dgt2 = 0;
 		while (dgt2 < 5)
 		{
 			_putchar(1 + 48);
