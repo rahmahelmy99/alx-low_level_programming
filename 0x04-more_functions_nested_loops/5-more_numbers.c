@@ -18,7 +18,7 @@ void more_numbers(void)
 		while (count <= 14)
 		{
 			num = count;
-			if (coumt > 9)
+			if (count > 9)
 			{
 				_putchar(1 + 48);
 				num = count % 10;
