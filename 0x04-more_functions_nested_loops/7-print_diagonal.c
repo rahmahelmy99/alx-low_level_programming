@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * print_diagonal - prototype function the draws a diagonal
  * line on the terminal.
@@ -10,7 +9,6 @@
  * Return: nothing.
  *
 */
-
 void print_diagonal(int n)
 {
 	int slash, spaces;
@@ -19,12 +17,14 @@ void print_diagonal(int n)
 		_putchar('\n');
 	else
 	{
-		for (slash = 1; slash <= n; slash++)
+		slash = 1;
+		while (slash <= n)
 		{
 			for (spaces = 1; spaces <= slash; spaces++) /* to print spaces n times*/
 				_putchar(' ');
 			_putchar('\\'); /*the character / in ascii*/
 			_putchar('\n');
+			slash++;
 		}
 	}
 }
