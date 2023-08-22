@@ -15,12 +15,12 @@ void rev_string(char *s)
 	int i = 0, ln;
 	char temp;
 
-	for (ln = 0; *s != '\0'; ln++)
+	for (ln = 0; *s != '\0'; ++ln)
 		;
-	for (i = 0; i < ln / 2; i++)
+	for (i = 0; i < ln / 2; ++i)
 	{
 		temp = s[i];
-		s[i] = s[ln  - i];
-		s[ln  - i] = temp;
+		s[i] = s[ln - 1 - i];
+		s[ln - 1 - i] = temp;
 	}
 }
