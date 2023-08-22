@@ -12,8 +12,6 @@
 
 void _puts(char *str)
 {
-	int count;
-
 	while (*str != '\0')
 	{
 		_putchar(*str);
