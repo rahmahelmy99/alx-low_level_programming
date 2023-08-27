@@ -13,8 +13,7 @@
 
 char *leet(char *s)
 {
-	int i;
-	int j;
+	int i, j;
 	char c[] = {'A', 'E', 'O', 'T', 'L'};
 	int n[] = {4, 3, 0, 7, 1};
 
@@ -24,7 +23,7 @@ char *leet(char *s)
 		{
 			if (s[i] == c[j] || s[i] == c[j] + 32)
 			{
-				s[i] == n[j] + 48;
+				s[i] == 48 + n[j];
 			}
 		}
 	}
