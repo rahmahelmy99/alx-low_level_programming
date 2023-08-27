@@ -13,11 +13,11 @@
 
 char *leet(char *s)
 {
-	int i, j;
+	int i = 0, j;
 	char c[] = {'A', 'E', 'O', 'T', 'L'};
 	int n[] = {4, 3, 0, 7, 1};
 
-	for (i = 0; s[i]; i++)
+	while (s[i])
 	{
 		for (j = 0; c[j]; j++)
 		{
@@ -26,6 +26,7 @@ char *leet(char *s)
 				s[i] == 48 + n[j];
 			}
 		}
+		i++;
 	}
 	return (s);
 }
