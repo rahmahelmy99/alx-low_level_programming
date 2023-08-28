@@ -7,7 +7,7 @@
  *
  *@s: input array.
  *
- * Return: 0 if success.
+ * Return: array after encodes.
  *
 */
 
@@ -19,7 +19,7 @@ char *leet(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; c[j] != '\0'; j++)
+		for (j = 0; i < 10; j++)
 		{
 			if (s[i] == c[j])
 			{
