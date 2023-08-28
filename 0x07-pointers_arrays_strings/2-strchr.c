@@ -16,12 +16,13 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; s[i] >= '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
 		if (s[i] == c)
-		{	return (s + i); /*to return the adrs of the
+			return (s + i); /*to return the adrs of the
 					 * character not the (s) first adrs
 					*/
-		}
+		else
+			return ('\0');
 	}
 }
