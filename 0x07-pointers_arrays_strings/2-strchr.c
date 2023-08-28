@@ -22,7 +22,6 @@ char *_strchr(char *s, char c)
 			return (s + i); /*to return the adrs of the
 					 * character not the (s) first adrs
 					*/
-		else
-			return ('\0');
 	}
+	return ('\0');
 }
