@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strstr - prototype function that 
+ * _strstr - prototype function that locates a substring.
  *
  *@haystack: input array.
  *@needle: input array.
@@ -18,14 +18,14 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (j = 0; needle[j] == hystack[i] && needle[j] != '\0'; j++)
+		for (j = 0; needle[j] == haystack[i] && needle[j] != '\0'; j++)
 		{
 			needle++;
 			haystack++;
 		}
 		if (needle[j] == '\0')
 		{
-			return (haystack)
+			return (haystack);
 		}
 	}
 	return ('\0');
