@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * create_array - prototype function that creates an array of
@@ -17,11 +18,10 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0 || arr == 0)
 		return (0); /*null character*/
-	else
-	{
-		while (size--)
-			n[size] = c;
-	}
-	return(n);
+
+	while (size--)
+		arr[size] = c;
+
+	return (arr);
 
 }
