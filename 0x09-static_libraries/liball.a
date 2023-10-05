@@ -1,0 +1,497 @@
+!<arch>
+0-isupper.c/    0           0     0     644     345       `
+#include "main.h"
+
+/**
+ * _isupper - a prototype function that checks
+ *		 if character is uppecase or not.
+ *
+ * @ch: is an input character.
+ *
+ * Return: return value is 0 means that charater is not
+ *		uppercase and 1 means it's uppercase charater.
+ *
+*/
+
+int _isupper(int ch)
+{
+	if (ch >= 65 && ch <= 90)
+		return (1);
+	else
+		return (0);
+}
+
+0-memset.c/     0           0     0     644     340       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _memset - prototype function that fills memory
+ *with a constant byte.
+ *
+ *@s: input array.
+ *@b: input character.
+ *@n: input number.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	int i;
+
+	for (i = 0; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+	}
+
+	return (s);
+}
+0-strcat.c/     0           0     0     644     351       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * *_strcat - prototype function that concatenates two strings.
+ *
+ *@dest: input array.
+ *@src: input array.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+char *_strcat(char *dest, char *src)
+{
+	int ln1, i;
+
+	for (ln1 = 0; dest[ln1]; ln1++)
+		;
+	for (i = 0; src[i]; i++)
+	{
+		dest[ln1++] = src[i];
+	}
+	return (dest);
+}
+
+100-atoi.c/     0           0     0     644     128       `
+#include "main.h"
+
+/**
+ * _atoi - prototype function
+ * @s: input character
+ * Return: an integer
+ *
+*/
+int _atoi(char *s)
+{
+
+}
+1-isdigit.c/    0           0     0     644     277       `
+#include "main.h"
+
+/**
+ * _isdigit - prototype function that checks checks
+ *		for a digit (0 through 9).
+ * @c: is an input number.
+ *
+ * Return: 1 if c is digit or 0 if it's not digit.
+ *
+*/
+
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
+}
+
+1-memcpy.c/     0           0     0     644     348       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _memcpy - prototype function that copies memory area.
+ *
+ *@dest: first input array
+ *@src: second input array.
+ *@n: input number.
+ *
+ * Return: dest array.
+ *
+*/
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int i;
+
+	for (i = 0; n > 0; i++, n--)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
+}
+1-strncat.c/    0           0     0     644     402       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * *_strncat - prototype function that concatenates
+ * two strings.
+ *
+ *@dest: first input array.
+ *@src: second input array.
+ *@n: input number.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int ln, i;
+
+	for (ln = 0; dest[ln]; ln++)
+		;
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[ln++] = src[i];
+	return (dest);
+}
+2-strchr.c/     0           0     0     644     500       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strchr - prototype function that locates a character in a string.
+ *
+ *@s: input array.
+ *@c: input character.
+ *
+ * Return: a pointer to the first occurrence of the character c in
+ *the string s, or NULL if the character is not found.
+ *
+*/
+
+char *_strchr(char *s, char c)
+{
+	int i;
+
+	for (i = 0; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (s + i); /*to return the adrs of the
+					 * character not the (s) first adrs
+					*/
+	}
+	return ('\0');
+}
+2-strlen.c/     0           0     0     644     298       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strlen - prototype function that returns
+ * the length of a string.
+ *
+ * @s: input that pointer will take to point.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+int _strlen(char *s)
+{
+	int count;
+
+	for (count = 0; *s != '\0'; s++)
+		count++;
+	return (count);
+}
+2-strncpy.c/    0           0     0     644     388       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * *_strncpy - prototype function that copies a string.
+ *
+ *@dest: first input array.
+ *@src: second input array.
+ *@n: input number.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for ( ; i < n; i++)
+		dest[i] = '\0';
+	return (dest);
+}
+3-islower.c/    0           0     0     644     280       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ *_islower - prototype function that checks
+ * for lowercase character.
+ *
+ * @c: input number.
+ *
+ * Return: 1 if c is lowercase and 0 otherwise.
+ *
+*/
+
+int _islower(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (1);
+	else
+		return (0);
+}
+3-puts.c/       0           0     0     644     263       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _puts - prototype function that prints a string.
+ *
+ *@str: input that ponter takes.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+void _puts(char *str)
+{
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
+}
+
+3-strcmp.c/     0           0     0     644     393       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strcmp - prototype function that compares two strings.
+ *
+ *@s1: first input character.
+ *@s2: second input character.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+int _strcmp(char *s1, char *s2)
+{
+	int i;
+	int res = 0;
+
+	for (i = 0; s1[i]; i++)
+	{
+		if (s1[i] != s2[i])
+		{
+			res = ((int)s1[i] - 48) - ((int)s2[i] - 48);
+			break;
+		}
+	}
+	return (res);
+}
+
+3-strspn.c/     0           0     0     644     505       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strspn - prototype function that gets the length
+ * of a prefix substring.
+ *
+ *@s: input array.
+ *@accept: input array to check.
+ *
+ * Return: number of bytes of the accept.
+ *
+*/
+
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int n = 0;
+	int i, j;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j]; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				n++;
+				break;
+			}
+			else if (accept[j + 1] == '\0')
+				return (n);
+		}
+	}
+	return (n);
+}
+
+4-isalpha.c/    0           0     0     644     290       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _isalpha - checks the input is letter or not.
+ *
+ * @c: input charater.
+ *
+ * Return: 1 if c is a letter and 0 otherwise.
+ *
+*/
+
+int _isalpha(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (1);
+	if (c >= 97 && c <= 122)
+		return (1);
+	return (0);
+}
+4-strpbrk.c/    0           0     0     644     500       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strpbrk - prototype function that searches a string for
+ * any of a set of bytes.
+ *
+ *@s: input array.
+ *@accept: input array.
+ *
+ * Return: a pointer to the byte in s that matches one of the
+ * bytes in accept, or NULL if no such byte is found.
+ *
+*/
+
+char *_strpbrk(char *s, char *accept)
+{
+	int i, j;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+				return (&s[i]);
+		}
+	}
+	return ('\0');
+}
+5-strstr.c/     0           0     0     644     509       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strstr - prototype function that locates a substring.
+ *
+ *@haystack: input array.
+ *@needle: input array.
+ *
+ * Return:  a pointer to the beginning of the located
+ * substring, or NULL if the substring is not found.
+ *
+*/
+
+char *_strstr(char *haystack, char *needle)
+{
+	int i, j;
+
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (j = 0; haystack[i] == needle[j] && needle[j] != '\0'; j++)
+			;
+		if (needle[j] == '\0')
+			return (haystack);
+	}
+	return ('\0');
+}
+
+6-abs.c/        0           0     0     644     263       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _abs - prototype function that computes the absolute
+ * value of an integer.
+ *@n:input number to check absolute.
+ *
+ * Return: n if program success.
+ *
+*/
+
+int _abs(int n)
+{
+	if (n < 0)
+		n = (-1) * n;
+	return (n);
+}
+
+9-strcpy.c/     0           0     0     644     402       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * *_strcpy - prototype function that copies the string
+ * pointed to by src,including null byte (\0).
+ *
+ *@dest: first input array.
+ *@src: second inpuy array.
+ *
+ * Return: 0 if success.
+ *
+*/
+
+char *_strcpy(char *dest, char *src)
+{
+	int i, ln;
+
+	for (ln = 0; src[ln] != '\0'; ln++)
+		;
+	for (i = 0; i < (ln + 1); i++)
+		dest[i] = src[i];
+	return (dest);
+}
+main.c/         0           0     0     644     142       `
+#include "main.h"
+
+int main(void)
+{
+	_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	return (0);
+}
+_putchar.c/     0           0     0     644     284       `
+#include "main.h"
+#include <unistd.h>
+#include <stdio.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+*/
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
