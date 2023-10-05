@@ -18,14 +18,13 @@ char *_strdup(char *str)
 {
 	int i;
 	int size;
-	char *arr = malloc(sizeof(str) + 1);
 
 	if (str == 0 || arr == 0)
 		return (0);
 
 	for (size = 0; str[size] != '\0'; size++)
 		;
-
+	char *arr = malloc(sizeof(str[size]) + 1);
 	for (i = 0; i < size; i++)
 	{
 		arr[i] = str[i];
