@@ -18,14 +18,14 @@ char *str_concat(char *s1, char *s2)
 	int size1 = 0, size2 = 0;
 	int i = 0, arrSize = 0;
 
-	if (s1 == '\0')
-		s1 = '\0';
-	if (s2 == '\0')
-		s2 = '\0';
 	for (; s1[size1] != '\0'; size1++)
 		;
 	for (; s2[size2] != '\0'; size2++)
 		;
+	if (size1 == 0)
+		s1 = '\0';
+	if (size2 == 0)
+		s2 = '\0';
 	arrSize = size1 + size2;
 	arr = malloc(arrSize *  sizeof(char) + 1);
 	if (arr == 0)
