@@ -28,7 +28,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i] != '\0'; i++)
 		conc[i] = s1[i];
 	for (j = 0; j < n; j++)
-		conc[i + j] = s2[j];
-	conc[i + j] = '\0';
+	{	conc[i] = s2[j];
+		i++;
+	}
+	conc[i] = '\0';
 	return (conc);
 }
