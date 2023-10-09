@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- * *string_nconcat - prototype function that concatenates two strings.
+ * string_nconcat - prototype function that concatenates
+ * two strings.
  * @s1: first string.
  * @s2: second string.
  * @n:input number.
