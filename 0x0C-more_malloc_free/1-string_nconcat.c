@@ -7,7 +7,7 @@
  * two strings.
  * @s1: first string.
  * @s2: second string.
- * @:n: input number.
+ * @n: input number.
  * Return: a pointer.
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
