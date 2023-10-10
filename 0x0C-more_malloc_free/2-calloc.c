@@ -13,17 +13,17 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	char *p = s;
-	
+
 	while (n--)
 		*p++ = b;
-	return (s);
+	return (p);
 }
 
 /**
  * _calloc - prototype function that allocates memory
  * for an array, using malloc.
  * @nmemb: input number of elemnets.
- * @size: input the size of elements.
+ * @size: input the size of an element.
  * Return: a pointer.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
