@@ -32,7 +32,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (0);
-	mloc = malloc(size * nmemb);
+	mloc = malloc(sizeof(int) * nmemb);
 	if (mloc == 0)
 		return (0);
 	_memset(mloc, 0, sizeof(int) * nmemb);
