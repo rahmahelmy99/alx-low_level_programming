@@ -12,13 +12,10 @@
 */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
-
-	for (i = 0; n > 0; i++)
-	{
-		s[i] = b;
-		n--;
-	}
+	char *p = s;
+	
+	while (n--)
+		*p++ = b;
 	return (s);
 }
 
@@ -35,7 +32,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (0);
-	mloc = malloc(sizeof(nmemb) * size);
+	mloc = malloc(size * nmemb);
 	if (mloc == 0)
 		return (0);
 	_memset(mloc, 0, sizeof(int) * nmemb);
