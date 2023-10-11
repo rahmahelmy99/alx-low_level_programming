@@ -5,6 +5,7 @@
  * print_dog - prototype function that prints a
  * struct dog.
  * @d: a struct copy.
+ * return: nothing.
 */
 void print_dog(struct dog *d)
 {
