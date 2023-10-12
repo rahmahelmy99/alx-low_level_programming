@@ -4,11 +4,11 @@
  * main - main program that runs the whole function.
  *@argc: input number of parameters.
  *@argv: input the vector.
- *
+ * Return: 0 if success
 */
-int main(argc, **argv)
+int main(int argc, char **argv)
 {
-	int (*fun_op)(int, int);
+	int (*func_op)(int, int);
 	int a, b;
 
 	if (argc != 4)
@@ -26,10 +26,10 @@ int main(argc, **argv)
 		exit(99);
 	}
 	if (!b && argv[2][0] == '/' || argv[2][0] == '%')
-        {
+	{
 		printf("Eror\n");
 		exit(100);
 	}
-	printf("%d\n" func_op(a, b));
-	return(0);
+	printf("%d\n", func_op(a, b));
+	return (0);
 }
