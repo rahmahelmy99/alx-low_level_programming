@@ -16,10 +16,10 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}};
 	int i;
 
-	while(i < 5)
+	while (i < 5)
 	{
 		if (s && s[0] == ops[i].op[0] && !s[1])
-			return(ops[i].f);
+			return (ops[i].f);
 		i++;
 	}
 	return (0);
