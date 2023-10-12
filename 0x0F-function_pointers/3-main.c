@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	int (*func_op)(int, int);
 	int a, b;
 
-	if (argc != 4)
+	if (argc >= 4)
 	{
 		printf("Eror\n");
 		exit(98);
