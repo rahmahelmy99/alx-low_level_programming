@@ -1,5 +1,17 @@
 #include "lists.h"
+/**
+ * _strlen - get the length of a string.
+ * @s: a string.
+ * Return: the size of a string.
+*/
+int _strlen(char *s)
+{
+	int i;
 
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (0);
+}
 /**
  * print_list -prototype function that prints all
  * elements of the list_t list.
