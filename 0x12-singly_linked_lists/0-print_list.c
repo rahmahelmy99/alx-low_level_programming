@@ -10,8 +10,8 @@ int _strlen(char *s)
 
 	if (!s)
 		return (0);
-	for (ln = 0; s[ln]; ln++)
-		;
+	while (*s++)
+		ln++;
 	return (ln);
 }
 /**
