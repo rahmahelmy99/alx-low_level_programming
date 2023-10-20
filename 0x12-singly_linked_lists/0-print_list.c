@@ -24,10 +24,10 @@ size_t print_list(const list_t *h)
 {
 	size_t i;
 
+	if (h->str == 0)
+		printf("[%d] (nil)\n", _strlen(h->str));
 	for (i = 0; h->str[i] != '\0'; i++)
 	{
-		if (h->str == 0)
-			printf("[%d] (nil)\n", _strlen(h->str));
 		printf("[%d] %s\n", _strlen(h->str), h->str);
 		h = h->next;
 	}
