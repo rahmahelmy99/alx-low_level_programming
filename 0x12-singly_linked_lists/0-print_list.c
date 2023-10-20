@@ -24,10 +24,11 @@ size_t print_list(const list_t *h)
 {
 	size_t i;
 
-	for (i = 0; h; i++)
+	while (h)
 	{
 		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
 		h = h->next;
+		i++;
 	}
 	return (i);
 }
