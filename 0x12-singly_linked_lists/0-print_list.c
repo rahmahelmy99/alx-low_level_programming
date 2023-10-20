@@ -4,10 +4,12 @@
  * @s: a string.
  * Return: the size of a string.
 */
-int _strlen(char *s)
+size_t _strlen(char *s)
 {
-	int ln = 0;
+	size_t  ln = 0;
 
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		s++;
