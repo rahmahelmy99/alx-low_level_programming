@@ -4,9 +4,9 @@
  * @s: a string.
  * Return: the size of a string.
 */
-size_t _strlen(char *s)
+int _strlen(char *s)
 {
-	size_t  ln = 0;
+	int  ln = 0;
 
 	if (!s)
 		return (0);
