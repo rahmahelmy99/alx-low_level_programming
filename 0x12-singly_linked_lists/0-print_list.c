@@ -6,27 +6,28 @@
 */
 int _strlen(char *s)
 {
-	int i;
+	int ln;
 
 	if (!s)
 		return (0);
-	for (i = 0; s[i]; i++)
+	for (ln = 0; s[ln]; ln++)
 		;
-	return (i);
+	return (ln);
 }
 /**
  * print_list -prototype function that prints all
  * elements of the list_t list.
- * @h: a struct data type.
+ * @h: a first node of linked list.
  * Return:the number of nodes.
 */
 size_t print_list(const list_t *h)
 {
 	size_t i;
 
+	h->len =_strlen(h->str);
 	for (i = 0; h; i++)
 	{
-		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+		printf("[%d] %s\n", h->len, h->str ? h->str : "(nil)");
 		h = h->next;
 	}
 	return (i);
