@@ -10,7 +10,7 @@ int _strlen(char *s)
 
 	if (!s)
 		return (0);
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 		;
 	return (i);
 }
@@ -24,9 +24,9 @@ size_t print_list(const list_t *h)
 {
 	size_t i;
 
-	if (h->str == 0)
+	if (!h->str)
 		printf("[%d] (nil)\n", _strlen(h->str));
-	for (i = 0; h->str[i] != '\0'; i++)
+	for (i = 0; h; i++)
 	{
 		printf("[%d] %s\n", _strlen(h->str), h->str);
 		h = h->next;
