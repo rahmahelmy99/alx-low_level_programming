@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	while(digit)
 	{
-		if (n & 1L << --bit)
+		if (n & 1L << --digit)
 		{
 			_putchar('1');
 			bnum++;
