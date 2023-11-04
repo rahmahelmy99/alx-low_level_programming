@@ -16,8 +16,8 @@ int create_file(const char *filename, char *text_content)
 		;
 	if (!filename)
 		return (-1);
-	fdesc = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0200 | 0400);
-	if (!filename)
+	fdesc = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	if (fdesc == -1)
 		return (-1);
 	if (len)
 		byt = write(fdesc, text_content, len);
