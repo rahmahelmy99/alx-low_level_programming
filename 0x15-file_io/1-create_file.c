@@ -14,14 +14,15 @@ int create_file(const char *filename, char *text_content)
 
 	for (len = 0; text_content[len] != 0; len++)
 		;
-	if (!filename)
+	if (!filename || !text_content)
 		return (-1);
-	fdesc = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fdesc = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fdesc == -1)
 		return (-1);
 	if (len)
 		byt = write(fdesc, text_content, len);
 	close(fdesc);
+
 	if (byt == len)
 		return (1);
 	else
