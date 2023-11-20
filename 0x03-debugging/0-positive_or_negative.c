@@ -1,8 +1,9 @@
+#include "main.h"
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Entry point.
+ * positive_or_negative - prototype function.
  *
  * Description: prgram to check the number is positive or negative.
  *
@@ -21,7 +22,7 @@ void positive_or_negative(int i)
 	{
 		printf("%i is negative\n", i);
 	}
-	else
+	else if (i == 0)
 	{
 		printf("0 is zero\n");
 	}
