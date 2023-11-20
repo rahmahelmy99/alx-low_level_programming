@@ -9,7 +9,7 @@
  * Return: return value is 0 means success.
 */
 
-int main(void)
+void positive_or_negative(int i)
 {
 	int n;
 
