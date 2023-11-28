@@ -1,4 +1,20 @@
 #include "main.h"
+/**
+ * _strlen - prototype function that returns
+ * the length of a string.
+ * @s: input that pointer will take to point.
+ * Return: 0 if success.
+*/
+int _strlen(char *s)
+{
+	int count;
+
+	if (!s)
+		return (0);
+	for (count = 0; *s != '\0'; s++)
+		count++;
+	return (count);
+}
 
 /**
  * append_text_to_file - prototype function that appends text at
@@ -20,9 +36,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content)
 	{
-		for (byt = 0; text_content[byt]; byt++)
-			;
-		rwr = write(fdesc, text_content, byt);
+		len = write(fdesc, text_content, byt);
 		if (len == 0)
 			return (-1);
 	}
