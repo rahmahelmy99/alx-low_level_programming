@@ -1,5 +1,22 @@
 #include "main.h"
 /**
+ * _strlen - prototype function that returns
+ * the length of a string.
+ * @s: input that pointer will take to point.
+ * Return: 0 if success.
+*/
+int _strlen(char *s)
+{
+	int count;
+
+	if (!s)
+		return (0);
+	for (count = 0; *s != '\0'; s++)
+		count++;
+	return (count);
+}
+
+/**
  * create_file - prototype function that creates a file.
  * @filename: filename.
  * @text_content: NULL terminated string to add at the end of the file
@@ -11,10 +28,8 @@ int create_file(const char *filename, char *text_content)
 {
 	int fdesc;
 	ssize_t byt = 0;
-	ssize_t len;
+	ssize_t len = _strlen(text_content);
 
-	for (len = 0; text_content[len] != 0; len++)
-		;
 	if (!filename || !text_content)
 		return (-1);
 	fdesc = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
