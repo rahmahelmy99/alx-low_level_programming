@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * create_file - that creates a file.
+ * create_file - prototype function that creates a file.
  * @filename: filename.
- * @text_content: content of file.
+ * @text_content: NULL terminated string to add at the end of the file
+ * content of file.
  * Return: 1 on success, -1 on failure (file can not be created,
  * file can not be written, write “fails”, etc…)
 */
