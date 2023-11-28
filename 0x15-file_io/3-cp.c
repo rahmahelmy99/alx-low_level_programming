@@ -26,10 +26,10 @@ int main(int argc, char **argv)
 	to_file = open(argv[2], O_wrONLY | O_CREAT | O_TRUNC, PERMISSION);
 	if (to_file == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, argv[2]), exit(99);
-	while ((b = read(from_file, buf, READ_BUF_SIZE)) > 0)
-		if (write(to_file, buffer, b) != b)
+	while ((byt = read(from_file, buf, READ_BUF_SIZE)) > 0)
+		if (write(to_file, buffer, byt) != byt)
 			dprintf(STDERR_FILENO, ERR_NOWRITE, argv[2]), exit(99);
-	if (b == -1)
+	if (byt == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, argv[1]), exit(98);
 	from_file() = close(from_file);
 	to_file = close(to_file);
